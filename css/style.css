@@ -17,6 +17,7 @@ body {
 
 .panel {
   border-radius: 0px;
+  border-color: #fff;
   background: none;
 }
 
@@ -31,7 +32,7 @@ body {
 }
 
 .table-responsive {
-  border: 1px solid #ddd;
+  border: 1px solid #fff;
   background: none;
   color: #fff;
 }
