@@ -42,14 +42,14 @@
           <table class="table">
             <thead>
               <tr>
-                <th>RANK </th>
+                <th>ID </th>
                 <th colspan="2">FIGHTER</th>
                 <th>POWER LEVEL</th>
                 <th>GRANT POWER</th>
               </tr>
             </thead>
             <tbody>
-              <tr v-for="character in characters">
+              <tr v-for="character in characters | orderBy 'pLevel' -1">
                 <td>{{ character.id }}</td>
                 <td colspan="2">{{ character.name }}</td>
                 <td>{{ character.pLevel }}</td>
