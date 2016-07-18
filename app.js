@@ -1,7 +1,7 @@
 new Vue({
   el: '#characters',
   data: {
-    character: { name: '', reason: ''},
+    character: { name: '', reason: '', pLevel: 1 },
     characters: []
   },
   ready: function() {
@@ -34,7 +34,7 @@ new Vue({
     addCharacter: function() {
       if(this.character.name) {
         this.characters.push(this.character);
-        this.character = { name: '', reason: '' };
+        this.character = { name: '', reason: '', pLevel: '1' };
       }
     },
     deleteCharacter: function(index) {
