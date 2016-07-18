@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Spirt Bomb</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <a class="navbar-brand">Spirit Bomb</a>
+      </div>
+    </nav>
+    <div class="container" id="characters">
+      <section id="about">
+        <div class="row">
+          <div class="col-md-12">
+            <p>It's the year 20XX, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut turpis mi, varius at arcu at, mattis vestibulum nisi. Vivamus vestibulum tincidunt urna, at varius nunc ultricies ac. Vivamus consequat, erat vel ullamcorper varius, odio sem finibus tortor, ac mollis felis ex vel massa. Etiam faucibus bibendum consequat. Quisque at sagittis quam. Etiam gravida eu diam ac hendrerit. In ut nunc mi. Pellentesque rhoncus risus id vehicula pharetra. Integer id est ut sapien posuere auctor eu eget turpis. In pulvinar non arcu vitae scelerisque. Integer dictum accumsan enim, nec dignissim lacus convallis at. Suspendisse lobortis euismod condimentum.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- add character -->
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>Add Contender</h3>
+          </div>
+          <div class="panel-body">
+            <div class="form-group">
+              <input class="form-control" placeholder="Character Name" v-model="character.name">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" placeholder="Reason for entering this fighter?" v-model="character.reason"></textarea>
+            </div>
+            <button class="btn btn-primary" v-on:click="addCharacter">ENTER</button>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>RANK </th>
+                <th colspan="2">FIGHTER</th>
+                <th>POWER LEVEL</th>
+                <th>GRANT POWER</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="circle first">
+                    1
+                  </div>
+                </td>
+                <td colspan="2">{{ character.name }}</td>
+                <td>{{ character.power_level }}</td>
+                <td><button></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="circle second">
+                    2
+                  </div>
+                </td>
+                <td colspan="2">{{ character.name }}</td>
+                <td>{{ character.power_level }}</td>
+                <td><button></button></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="circle third">
+                    3
+                  </div>
+                </td>
+                <td colspan="2">{{ character.name }}</td>
+                <td>{{ character.power_level }}</td>
+                <td><button></button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- show character notification and delete -->
+      <div class="col-sm-6">
+        <div class="list-group">
+          <div class="panel-heading">
+            <h3>Recent Entries</h3>
+          </div>
+          <a href="#" class="list-group-item" v-for="character in characters">
+            <h4 class="list-group-item-heading">
+            {{ character.name }}
+            </h4>
+            <h5>
+            </h5>
+            <p class="list-group-item-text" v-if="character.reason">
+            {{ character.reason }}</p><br />
+            <button class="btn btn-xs btn-danger" v-on:click="deleteCharacter"($index)">Delete</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- vue -->
+  <script src="node_modules/vue/dist/vue.js"></script>
+  <script src="node_modules/vue-resource/dist/vue-resource.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
