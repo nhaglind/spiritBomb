@@ -13,17 +13,20 @@ new Vue({
         {
           id: 1,
           name: 'Megaman',
-          reason: 'Classic blue dude, that has always been unstoppable.'
+          reason: 'Classic blue dude, that has always been unstoppable.',
+          pLevel: 20
         },
         {
           id: 2,
           name: 'Link',
-          reason: 'His passion for love never dies, Zelda is bae.'
+          reason: 'His passion for love never dies, Zelda is bae.',
+          pLevel: 30
         },
         {
           id: 3,
           name: 'Cloud',
-          reason: 'Although he has a lot of mental problems, he is one hell of a soldier.'
+          reason: 'Although he has a lot of mental problems, he is one hell of a soldier.',
+          pLevel: 15
         }
       ];
       this.$set('characters', characters);
