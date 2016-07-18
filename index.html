@@ -50,11 +50,7 @@
             </thead>
             <tbody>
               <tr v-for="character in characters">
-                <td>
-                  <div class="circle first">
-                    1
-                  </div>
-                </td>
+                <td>{{ character.id }}</td>
                 <td colspan="2">{{ character.name }}</td>
                 <td>{{ character.pLevel }}</td>
                 <td><button></button></td>
