@@ -25,9 +25,18 @@ body {
   background: none;
 }
 
+.panel h3 {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Raleway;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+
 .panel-default>.panel-heading {
   background: none;
   border: none;
+
 }
 
 #about {
@@ -44,6 +53,14 @@ body {
 .btn {
   border-radius: 0px;
   font-family: monospace;
+}
+
+.list-group-item-heading {
+    font-size: 15px;
+  font-weight: 600;
+  font-family: Raleway;
+  text-transform: uppercase;
+  letter-spacing: .8px;
 }
 
 .list-group-item:last-child {
