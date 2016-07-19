@@ -63,27 +63,32 @@
       <!-- show character notification and delete -->
       <div class="col-sm-6">
         <div class="list-group">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h3>Recent Entries</h3>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3>Recent Entries</h3>
+            </div>
+            <a href="#" class="list-group-item" v-for="character in characters | limit 5">
+              <h4 class="list-group-item-heading">
+              {{ character.name }}
+              </h4>
+              <h5>
+              </h5>
+              <p class="list-group-item-text" v-if="character.reason">
+              {{ character.reason }}</p><br />
+              <button class="btn btn-xs btn-danger" v-on:click="deleteCharacter"($index)">Delete</button>
+            </a>
+            <a href="#0">
+              <div class="panel-heading show-more">
+                <h3>Show More</h3>
+              </div>
+            </a>
           </div>
-          <a href="#" class="list-group-item" v-for="character in characters | limit 5">
-            <h4 class="list-group-item-heading">
-            {{ character.name }}
-            </h4>
-            <h5>
-            </h5>
-            <p class="list-group-item-text" v-if="character.reason">
-            {{ character.reason }}</p><br />
-            <button class="btn btn-xs btn-danger" v-on:click="deleteCharacter"($index)">Delete</button>
-          </a>
         </div>
       </div>
     </div>
-  </div>
-  <!-- vue -->
-  <script src="node_modules/vue/dist/vue.js"></script>
-  <script src="node_modules/vue-resource/dist/vue-resource.js"></script>
-  <script src="app.js"></script>
-</body>
+    <!-- vue -->
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script src="node_modules/vue-resource/dist/vue-resource.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
