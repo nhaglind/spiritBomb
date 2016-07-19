@@ -44,3 +44,8 @@ new Vue({
     }
   }
 });
+
+Vue.filter('limit', function (array, limit)
+{
+     return array.slice(0, limit);
+});
