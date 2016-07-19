@@ -69,6 +69,10 @@ body {
   margin-bottom: 0;
 }
 
+.table-header {
+  border: none !important;
+}
+
 textarea {
   resize: none;
 }
