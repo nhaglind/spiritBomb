@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   background-image: url(../images/goku_sb.png);
   background-color: #777;
@@ -63,4 +67,8 @@ body {
 
 .table {
   margin-bottom: 0;
+}
+
+textarea {
+  resize: none;
 }
