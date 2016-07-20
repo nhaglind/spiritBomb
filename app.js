@@ -1,3 +1,5 @@
+
+
 new Vue({
   el: '#characters',
   data: {
@@ -41,11 +43,21 @@ new Vue({
       if(confirm("Are you sure you want to delete this character?")) {
         this.characters.splice(index, 1);        
       }
+    },
+    showMore: function() {
+    maxShown += 5;
     }
   }
 });
 
-Vue.filter('limit', function (array, limit)
-{
-     return array.slice(0, limit);
-});
+/*
+Vue.filter('limit', function (array, limit) {
+    return array.slice(0, limit);
+  }
+);
+*/
+
+Vue.filter('limit', function (array, maxShown){
+  return array.slice(0, maxShown);
+  }
+);
